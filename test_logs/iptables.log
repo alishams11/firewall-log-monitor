@@ -1,0 +1,10 @@
+Jun 01 14:22:01 firewall kernel: [UFW BLOCK] IN=eth0 OUT= MAC=00:1C:42:2E:60:4A SRC=192.168.1.10 DST=192.168.1.1 PROTO=TCP SPT=45321 DPT=22
+Jun 01 14:22:02 firewall kernel: [UFW BLOCK] IN=eth0 OUT= MAC=00:1C:42:2E:60:4B SRC=10.0.0.2 DST=192.168.1.1 PROTO=UDP DPT=53
+Jun 01 14:22:03 firewall kernel: [IPTABLES REJECT] Connection attempt from 203.0.113.10 to port 8080
+Jun 01 14:22:04 firewall kernel: [PORTSCAN] Multiple SYN packets from 192.168.1.50 to port range 20–25
+Jun 01 14:22:05 firewall kernel: [ACCEPT] IN=lo OUT= MAC= SRC=127.0.0.1 DST=127.0.0.1 PROTO=TCP SPT=5432 DPT=5432
+Jun 01 14:22:06 firewall kernel: [DROP] IN=eth1 OUT= MAC=00:1C:42:2E:60:4C SRC=198.51.100.25 DST=192.168.1.1 PROTO=ICMP TYPE=8 CODE=0
+Jun 01 14:22:07 firewall kernel: [UFW BLOCK] IN=eth0 OUT= MAC=00:1C:42:2E:60:4D SRC=203.0.113.15 DST=192.168.1.2 PROTO=TCP SPT=60000 DPT=23
+Jun 01 14:22:08 firewall kernel: [IPTABLES ACCEPT] IN=eth0 OUT= MAC=00:1C:42:2E:60:4E SRC=10.10.10.5 DST=10.10.10.1 PROTO=TCP SPT=80 DPT=55874
+Jun 01 14:22:09 firewall kernel: [PORTSCAN] Possible scan detected from 192.168.1.20 with unusual frequency
+Jun 01 14:22:10 firewall kernel: [REJECT] Blocked attempt from 104.26.1.2 to port 3389
