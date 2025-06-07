@@ -1,6 +1,8 @@
 import time
 import re
 import os
+from monitor.telegram_alert import send_telegram_alert
+
 
 SUSPICIOUS_PATTERNS = [
     r'\bDROP\b',
@@ -31,9 +33,12 @@ def follow_log(file_path):
                 line = line.strip()
                 if is_suspicious(line):
                     print(f"\033[91m[🔥 ALERT] Suspicious activity detected:\n🚨 {line}\033[0m\n")
-                    print('\a')  # plays a beep sound (optional)
+                    print('\a')
+                    send_telegram_alert(f"🚨 Suspicious activity detected:\n{line}")
+                    os.system("mpg123 monitor/alarm.mp3 > /dev/null 2>&1")
+
+                      # plays a beep sound (optional)
                     # If you have alarm.mp3:
-                    # os.system("mpg123 monitor/alarm.mp3 > /dev/null 2>&1")
                 else:
                     print(f"[~] {line}")
 
